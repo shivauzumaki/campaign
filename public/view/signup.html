@@ -1,0 +1,113 @@
+<div header2></div>
+<div class="container">
+    <div style="width: 80%;margin-left: 10%; margin-top: 25px;">
+        <h2 style="margin: 10px 0; text-align: center;font-weight:bolder ">IdeaDeck Signup Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" ng-model="user.firstname" placeholder="Enter first name">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" ng-model="user.lastname" placeholder="Enter last name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" ng-model="user.email" placeholder="Enter email address">
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword">Password</label><a href=""><span id="showPassword" class="showpass">show</span></a>
+                <input type="password" class="form-control" id="inputPassword" ng-model="user.password" placeholder="Enter password">
+            </div>
+
+            <div class="form-group">
+                <label for="organisation">Institution / Organisation Name</label>
+                <input type="text" class="form-control" id="organisation" ng-model="user.organisation" placeholder="Enter Institution / Organisation Name">
+            </div>
+            <div class="form-group">
+                <label for="teamname">Team Name</label>
+                <input type="text" class="form-control" id="teamname" ng-model="user.teamname" placeholder="Enter team name">
+            </div>
+
+            <div class="form-group">
+                <label for="teammembers">Team Members (Min:2 Max:5)</label>
+                <fieldset data-ng-repeat="choice in choices track by $index" id="teammembers" ng-model="user.choices">
+                    <input class="form-control-edit" style="margin: 7px 10px;" type="text" ng-model="choice.firstname" name="" placeholder="Enter first name">
+                    <input class="form-control-edit" style="margin: 7px 10px;"  type="text" ng-model="choice.lastname" name="" placeholder="Enter last name">
+                    <input class="form-control-edit" style="margin: 7px 10px;" type="email" ng-model="choice.email" name="" placeholder="Enter email address">
+                    <input class="form-control-edit" style="margin: 7px 10px;" type="text" ng-model="choice.organisation" name="" placeholder="Enter organisation">
+                    <button class="remove" ng-show="$last" ng-click="removeChoice()">Remove</button>
+                </fieldset>
+                <button class="addfields" ng-click="addNewChoice()">Add member</button>
+            </div>
+            <div class="alert alert-danger" data-ng-show="showerror" id="alertMessage">{{message}}</div>
+            <div style="text-align: center;">
+                <button type="submit" ng-click="signup()" class="btn">Create Account</button>
+            </div>
+        </form>
+    </div>
+    <div style="text-align: center;margin-bottom: 20px;">
+        <span> Already have an account? <span><a href="#!/login">Login</a> </span></span>
+    </div>
+</div>
+<div footeridea></div>
+
+<script type="text/javascript">
+
+    $(".showpass").mousedown(function(){
+        $("#inputPassword").attr('type','text');
+    }).mouseup(function(){
+        $("#inputPassword").attr('type','password');
+    }).mouseout(function(){
+        $("#inputPassword").attr('type','password');
+    });
+
+</script>
+
+
+<style type="text/css">
+
+    .btn{
+        margin:30px;
+        background-color: black;
+        color: white;
+    }
+    .container{
+        background-color: white;
+        height:100%;
+    }
+
+    .remove{
+        border: solid 1px black;
+        border-radius: 5px;
+    }
+
+    .addfields{
+        margin-left:10px;
+        margin-top:10px;
+        border: solid 1px black;
+        border-radius: 5px;
+    }
+
+    .form-control-edit{
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+
+
+
+
+</style>

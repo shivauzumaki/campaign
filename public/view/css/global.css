@@ -1,0 +1,64 @@
+html,body{
+    height: 100%;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.btn-primary{
+    background-image: -webkit-linear-gradient(top,black 0,black 100%);
+    background-image: -o-linear-gradient(top,black 0,black 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(black),to(black));
+    background-image: linear-gradient(to bottom,black 0,black 100%);
+    background-repeat: repeat-x;
+    border-color: black;
+}
+
+#showPassword,#showPasswordConfirm{
+    float: right;
+    font-size:12px;
+    color: #007aff;
+    padding-top: 5px;
+    cursor: hand;
+}
+
+
+.btn-primary:focus, .btn-primary:hover {
+    background-color: black;
+    background-position: 0px ;
+}
+
+
+.buttonLike {
+    background: grey;
+    padding: 17px 13px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-left:20px;
+}
+
+.navbar-inverse{
+    background-color: black;
+    border-radius: 0px;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+
+
+.footer-styles{
+    margin: 0px 40px;
+    padding-top: 15px;
+}
+
+.footer{
+    height:50px;
+    background-color: #222;
+    color: white;
+
+    /*Bottom of the page*/
+    /*position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;*/
+}

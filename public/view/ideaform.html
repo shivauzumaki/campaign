@@ -1,0 +1,245 @@
+<div header></div>
+<!--<div>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <div style="margin:0 3%">
+            <a class="navbar-brand" href="#/" style="color: white">IdeaDeck</a>
+            <div class="pull-right" id="navbarSupportedContent" style="margin-top:15px;margin-right: 15px;">
+                <div ng-if="loggedUser == null">
+                    <a class="buttonLike" href="#!/login"> Login </a>
+                    <a class="buttonLike" href="#!/signup"> Sign Up</a>
+                </div>
+                <div ng-if="loggedUser != null">
+                    <a style="color: white;"> Welcome {{loggedUser}}</a>
+                    <a class="buttonLike" href="#!/idea">Submit Idea</a>
+                    <a class="buttonLike" href="#!/profile">Profile</a>
+                    <a class="buttonLike" href="" ng-click = "userLogout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>-->
+<div class="container">
+    <h2>Idea</h2>
+    <form>
+        <div class="form-group">
+            <label for="title">Idea title</label>
+            <input required type="text" class="form-control" id="title" ng-model="idea.title" placeholder="Enter idea">
+        </div>
+        <div class="form-group">
+            <label for="summary">A One-Liner Pitch, What is your idea? (200 words)</label>
+            <textarea required class="form-control" id="summary"rows="6" ng-model="idea.summary" placeholder="A short sentence that summarises your idea"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="keyproblem">What is the problem that your idea solves? (200 words)</label>
+            <textarea required class="form-control" id="keyproblem" rows="6" ng-model="idea.keyproblem" placeholder="Key Problem that your solution can solve"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="customers">Who are your customers? (200 words)</label>
+            <textarea required class="form-control" id="customers" rows="6" ng-model="idea.customers" placeholder="Customers are the ones that pays you"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="betteridea">Why is your idea better than what is available in the Market? (500 words)</label>
+            <textarea required class="form-control" id="betteridea" rows="8" ng-model="idea.betteridea" placeholder="Do Indicate if nothing similar is available out there"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="passionate">Why are you passionate about this idea? (200 words)</label>
+            <textarea required class="form-control" id="passionate" rows="6" ng-model="idea.passionate" placeholder="You will go all out for it"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="aboutteam">Why is your Team best suited to do this? (200 words)</label>
+            <textarea required class="form-control" id="aboutteam" rows="6" ng-model="idea.aboutteam" placeholder="Indicate you Team’s Unfair Advantage"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select required class="form-control" id="category" ng-change="getSubList()" ng-model="idea.category">
+                <option value="" disabled>Select Category</option>
+                <option value="Social Care">Social Care</option>
+                <option value="General Tech">General Tech</option>
+                <option value="Deep Tech">Deep Tech</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subcategory">Sub-Category</label>
+            <select required class="form-control" id="subcategory" ng-change="getProbList()" ng-model="idea.subcategory">
+                <option value="" disabled>Select Category</option>
+                <option ng-repeat="subcat in subcategories">{{subcat.subcategory}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Which Problem Statements your Idea Solves?</label>
+            <label>Select Maximum 3 Problem Statements for this List</label>
+            <!--<div>
+                <ul class="list-group" data-toggle="items" >
+                    <a size="3" href="#" ng-repeat="prob in problist" class="list-group-item" ng-model="idea.problems">{{prob.title}}</a>
+                </ul>
+            </div>-->
+            <!--<select ng-model="idea.problems[$index]">
+                <option ng-repeat="prob in problist">{{prob.title}}</option>
+            </select>-->
+            <!--<select
+                    ng-model="idea.problems"
+                    multiple
+                    ng-multiple="true"
+                    style="width: 300px;"
+                    ng-options="prob.title for prob in problist track by $index">
+            </select>-->
+            <!--<select multiple="multiple" ng-model="idea.problems"  >
+                <option ng-repeat ="prob in problist">{{prob.title}}</option>
+            </select>-->
+
+            <!--<select class="list-group"  ng-model="idea.problems"  >
+                <option ng-repeat ="prob in problist" class="list-group-item">{{prob.title}}</option>
+            </select>-->
+
+            <div>
+                <label ng-repeat="prob in problist" style="width:100%;!important;border: 1px solid #e3e3e3;display: block;cursor: pointer">
+                    <input type="checkbox" style="margin-left: 20px" checklist-model="idea.problems" checklist-value="prob"> {{prob.title}}
+                </label>
+            </div>
+        </div>
+
+
+        <div style="text-align: center;">
+            <button type="submit" style="margin-bottom: 30px;background-color: black" ng-click="creatingIdea()" class="btn btn-primary">Submit Idea</button>
+        </div>
+    </form>
+</div>
+
+<div footeridea></div>
+
+<style type="text/css">
+
+
+
+
+
+    /* scrollbar css*/
+
+    .well::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    .well::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    .well::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: grey;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+    .well::-webkit-scrollbar-thumb:window-inactive {
+        background: grey;
+    }
+
+    /*end of scrollbar css*/
+
+
+
+    .container{
+        background-color: white;
+        height:100%;
+    }
+
+    .well  {
+        margin: 0px;
+        padding:0px;
+    }
+
+    .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+        text-shadow: grey 0px -1px 0px;
+        background-image: linear-gradient(grey 0px, grey 100%);
+        background-repeat: repeat-x;
+        border-color: grey;
+    }
+
+
+</style>
+
+<script type="text/javascript">
+
+
+    +function(n){"use strict";var i=function(t,i){this.$element=n(t);this.options=i||{};this.init()},t;i.prototype.init=function(){var r=this,i=this.$element,t=this.options;t.toggle&&i.attr("data-toggle",t.toggle);i.on("click",".list-group-item",function(){var u=n(this);return u.hasClass("disabled")||(i.data("toggle")=="items"?u.toggleClass("active"):r.unselect("*").select(u),t.click&&t.click.apply(this)),u.blur(),!1})};i.prototype.select=function(t){var i,r;if(t instanceof n&&t.addClass("active"),typeof t=="string"&&(t=[t]),Array.isArray(t))for(i in t)r=t[i],this.$element.find(".list-group-item[data-value='"+r+"']").addClass("active");return this};i.prototype.unselect=function(n){return this.$element.find(".list-group-item").filter(n||"*").removeClass("active"),this};t=function(t,i){this.$element=n(t);this.options=i;this.$listGroup=this.createListGroup()};t.prototype.select=function(t){if(t instanceof n){var i=[];t.each(function(t,r){i.push(n(r).val())});t=i}this.$element.val(t).change()};t.prototype.unselect=function(n){var t=this.$element.val(),i;Array.isArray(t)||(t=[t]);Array.isArray(n)||(n=[n]);for(i in n)t.pop(n[i]);this.$element.val(t).change()};t.prototype.createListGroup=function(){var t=this.$element,i=n("<ul>").addClass("list-group");return t.attr("multiple")&&i.attr("data-toggle","items"),t.find("option").each(function(t,r){var u=n(r),f=n("<a>").attr("href","#").addClass("list-group-item").attr("data-value",u.val()).text(u.text());u.is(":disabled")&&f.addClass("disabled");u.css("display")==="none"&&f.addClass("hidden");i.append(f)}),t.change(function(){i.listgroup({unselect:"*",select:t.val()})}),i.listgroup({select:t.val(),click:function(){var r=[];i.find(".list-group-item.active").each(function(t,i){var u=n(i).data("value");r.push(u)});r.length==1&&(r=r[0]);t.val(r)}}),t.before(i),this.$listGroup=i,t.hide(),i};n.fn.listgroup=function(r){return this.each(function(u,f){var o=n(f),e=o.data("listgroup");e||o.data("listgroup",e=o.is("select")?new t(f,r):new i(f,r));r&&(r.unselect&&e.unselect(r.unselect),r.select&&e.select(r.select))})};n(function(){n(".list-group").listgroup()})}(jQuery);
+
+/*
+    $(function () {
+        $('.list-group.checked-list-box .list-group-item').each(function () {
+
+            // Settings
+            var $widget = $(this),
+                $checkbox = $('<input type="checkbox" class="hidden" />'),
+                color = ($widget.data('color') ? $widget.data('color') : "primary"),
+                style = ($widget.data('style') == "button" ? "btn-" : "list-group-item-"),
+                settings = {
+                    on: {
+                        icon: 'glyphicon glyphicon-check'
+                    },
+                    off: {
+                        icon: 'glyphicon glyphicon-unchecked'
+                    }
+                };
+
+            $widget.css('cursor', 'pointer')
+            $widget.append($checkbox);
+
+            // Event Handlers
+            $widget.on('click', function () {
+                $checkbox.prop('checked', !$checkbox.is(':checked'));
+                $checkbox.triggerHandler('change');
+
+                $('input').on('change', function(evt) {
+                    if($(this).siblings(':checked').length <= 3) {
+                        updateDisplay();
+                    }
+                });
+            });
+            $checkbox.on('change', function () {
+                updateDisplay();
+            });
+
+
+            // Actions
+            function updateDisplay() {
+                var isChecked = $checkbox.is(':checked');
+
+                // Set the button's state
+                $widget.data('state', (isChecked) ? "on" : "off");
+
+                // Set the button's icon
+                $widget.find('.state-icon')
+                    .removeClass()
+                    .addClass('state-icon ' + settings[$widget.data('state')].icon);
+
+                // Update the button's color
+                if (isChecked) {
+                    $widget.addClass(style + color + ' active');
+                } else {
+                    $widget.removeClass(style + color + ' active');
+                }
+            }
+
+            // Initialization
+            function init() {
+
+                if ($widget.data('checked') == true) {
+                    $checkbox.prop('checked', !$checkbox.is(':checked'));
+                }
+
+                updateDisplay();
+
+                // Inject the icon if applicable
+                if ($widget.find('.state-icon').length == 0) {
+                    $widget.prepend('<span class="state-icon ' + settings[$widget.data('state')].icon + '"></span> ');
+                }
+            }
+            init();
+        });
+    });*/
+
+</script>

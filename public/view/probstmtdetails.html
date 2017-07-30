@@ -1,0 +1,51 @@
+<div header></div>
+<!--<div>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <div style="margin:0 3%">
+            <a class="navbar-brand" href="#/" style="color: white">IdeaDeck</a>
+            <div class="pull-right" id="navbarSupportedContent" style="margin-top:15px;margin-right: 15px;">
+                <div ng-if="loggedUser == null">
+                    <a class="buttonLike" href="#!/login"> Login </a>
+                    <a class="buttonLike" href="#!/signup"> Sign Up</a>
+                </div>
+                <div ng-if="loggedUser != null">
+                    <a style="color: white;"> Welcome {{loggedUser}}</a>
+                    <a class="buttonLike" href="#!/idea">Submit Idea</a>
+                    <a class="buttonLike" href="#!/profile">Profile</a>
+                    <a class="buttonLike" href="" ng-click = "userLogout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>-->
+<br>
+
+<div class="container">
+    <a href="javascript:void(0);" ng-click="go_back()">Back</a>
+    <h2 style="margin: 10px 0; ">Problem statement details</h2>
+        <div>
+            <p style="font-weight: bolder">Title:</p>
+            <p>{{problemItem.title}} </p>
+        </div>
+        <div>
+            <p style="font-weight: bolder">Category:</p>
+            <p>{{problemItem.category}} </p>
+        </div>
+    <div>
+        <p style="font-weight: bolder">Sub-Category:</p>
+        <p>{{problemItem.subcategory}} </p>
+    </div>
+        <div>
+            <p style="font-weight: bolder">Description:</p>
+            <p>{{problemItem.description}} </p>
+        </div>
+</div>
+<div footeridea></div>
+
+<style type="text/css">
+    .container{
+        background-color: white;
+        height:100%;
+    }
+
+</style>

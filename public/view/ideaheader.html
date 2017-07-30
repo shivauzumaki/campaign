@@ -1,0 +1,20 @@
+<div>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <div style="margin:0 3%">
+            <a class="navbar-brand" href="#/" style="color: white">IdeaDeck</a>
+            <div class="pull-right" id="navbarSupportedContent" style="margin-top:15px;margin-right: 15px;">
+                <div ng-if="loggedUser == null">
+                    <a class="buttonLike" href="#!/login"> Login </a>
+                    <a class="buttonLike" href="#!/signup"> Sign Up</a>
+                </div>
+                <div ng-if="loggedUser != null">
+                    <a style="color: white;"> Welcome {{loggedUser}}</a>
+                    <a class="buttonLike" href="#!/idea">Submit Idea</a>
+                    <a class="buttonLike" href="#!/profile">Profile</a>
+                    <a class="buttonLike" href="" ng-click = "userLogout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+

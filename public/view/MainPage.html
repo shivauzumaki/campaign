@@ -1,0 +1,76 @@
+<div header></div>
+<!--<div>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <div style="margin:0 3%">
+            <a class="navbar-brand" href="#/" style="color: white">IdeaDeck</a>
+            <div class="pull-right" id="navbarSupportedContent" style="margin-top:15px;margin-right: 15px;">
+                <div ng-if="loggedUser == null">
+                    <a class="buttonLike" href="#!/login"> Login </a>
+                    <a class="buttonLike" href="#!/signup"> Sign Up</a>
+                </div>
+                <div ng-if="loggedUser != null">
+                    <a style="color: white;"> Welcome {{loggedUser}}</a>
+                    <a class="buttonLike" href="#!/idea">Submit Idea</a>
+                    <a class="buttonLike" href="#!/profile">Profile</a>
+                    <a class="buttonLike" href="" ng-click = "userLogout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>-->
+<div style="margin-bottom: 8%;">
+
+    <div class="container" style="background-color: white;height: 400px;">
+
+        <div>
+            <p style="font-weight: bolder;font-size:40px;text-align: center;margin-top: 4%;"> ideaDeck</p>
+            <p style="font-weight: bolder;font-size:20px;text-align: center;margin-bottom: 3%">National Ideathon Challenge for PMETs and Youths</p>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <div class="col-md-4"  id="socialcareprop">
+                <a href="" ng-click="getSubCatList('Social Care')">
+                <div class="col-md-12 card" style="background-image: url('../resources/categoryImages/Social Care/Social Care-800.jpg');">
+                    <p class="cardText">Social Care</p>
+                </div>
+                </a>
+
+            </div>
+            <div class="col-md-4">
+                <a href="" ng-click="getSubCatList('General Tech')">
+                <div class="col-md-12 card" style="background-image: url('../resources/categoryImages/General Tech/generaltech-800.jpg');">
+                    <p class="cardText">General Tech</p>
+                </div>
+                </a>
+
+            </div>
+            <div class="col-md-4 ">
+                <a href="" ng-click="getSubCatList('Deep Tech')">
+                <div class="col-md-12 card" style="background-image: url('../resources/categoryImages/noImage.jpg');">
+                    <p class="cardText">Deep Tech</p>
+                </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div footeridea></div>
+
+<style type="text/css">
+
+     .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        height: 220px;
+        background-size: cover;background-position: center;
+    }
+
+    .cardText{
+        margin-top: 28%;
+        font-size: 20px;
+        font-weight: bolder;
+        color: white;
+    }
+</style>

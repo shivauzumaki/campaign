@@ -1,0 +1,43 @@
+<div header></div>
+<div class="container" style="height: 100%;margin-bottom: 30px;">
+    <a ng-click="go_back_main()">Back</a>
+    <br>
+    <div ng-repeat="subCategory in mainSubCatgoryList" class="col-md-3" style="margin: 10px 0;height: 150px">
+        <a href="" ng-click="getProblemList(subCategory)">
+            <div class="col-md-12 subcatBlock" style="background-image: url('../resources/categoryImages/{{mainCategory}}/{{subCategory.subcategoryimageurl}}');">
+                <p class="cardText"> {{subCategory.subcategory}}</p>
+            </div>
+        </a>
+    </div>
+</div>
+<div footeridea></div>
+
+<style type="text/css">
+
+    .cardText{
+        font-size: 20px;
+        font-weight: bolder;
+        color: black;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+
+    a:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    .subcatBlock{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        word-wrap: break-word;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+
+        background-size: cover;background-position: center;
+    }
+
+
+</style>

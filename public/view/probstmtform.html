@@ -1,0 +1,60 @@
+<div header></div>
+<!--<div>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <div style="margin:0 3%">
+            <a class="navbar-brand" href="#/" style="color: white">IdeaDeck</a>
+            <div class="pull-right" id="navbarSupportedContent" style="margin-top:15px;margin-right: 15px;">
+                <div ng-if="loggedUser == null">
+                    <a class="buttonLike" href="#!/login"> Login </a>
+                    <a class="buttonLike" href="#!/signup"> Sign Up</a>
+                </div>
+                <div ng-if="loggedUser != null">
+                    <a style="color: white;"> Welcome {{loggedUser}}</a>
+                    <a class="buttonLike" href="#!/idea">Submit Idea</a>
+                    <a class="buttonLike" href="#!/profile">Profile</a>
+                    <a class="buttonLike" href="" ng-click = "userLogout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>-->
+<br>
+
+<div class="container">
+    <h2 style="margin: 10px 0; text-align: center;">Problem statement</h2>
+    <form>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input required type="text" class="form-control" id="title" placeholder="Enter Title" ng-model="problem.title">
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select required class="form-control" id="category" ng-change="getSubList()" ng-model="problem.category">
+                <option value="" disabled>Select Category</option>
+                <option value="Social Care">Social Care</option>
+                <option value="General Tech">General Tech</option>
+                <option value="Deep Tech">Deep Tech</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subcategory">Sub-Category</label>
+            <select required class="form-control" id="subcategory"  ng-model="problem.subcategory">
+                <option value="" disabled>Select Category</option>
+                <option ng-repeat="subcat in subcategories">{{subcat.subcategory}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Desciption</label>
+            <textarea required class="form-control" id="description" ng-model="problem.description" rows="8" placeholder="Enter the problem statement"></textarea>
+        </div>
+        <div style="text-align: center;">
+            <button type="submit" ng-click="create()" class="btn btn-primary">Submit Problem Statement</button>
+        </div>
+    </form>
+</div>
+<div footeridea></div>
+
+
+<style type="text/css">
+
+</style>
