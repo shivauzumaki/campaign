@@ -1,7 +1,7 @@
 var http = require('http');
 var app = require('../server'); // The express app we just created
 
-var port = parseInt(process.env.PORT, 10) || 80;
+var port = parseInt(process.env.PORT, 10) || 8085;
 app.set('port', port);
 
 var server = http.createServer(app);
