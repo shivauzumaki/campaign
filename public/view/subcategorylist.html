@@ -5,7 +5,9 @@
     <div ng-repeat="subCategory in mainSubCatgoryList" class="col-md-3" style="margin: 10px 0;height: 150px">
         <a href="" ng-click="getProblemList(subCategory)">
             <div class="col-md-12 subcatBlock" style="background-image: url('../resources/categoryImages/{{mainCategory}}/{{subCategory.subcategoryimageurl}}');">
+                <div class="darkOverlay">
                 <p class="cardText"> {{subCategory.subcategory}}</p>
+                </div>
             </div>
         </a>
     </div>
@@ -17,8 +19,10 @@
     .cardText{
         font-size: 20px;
         font-weight: bolder;
-        color: black;
-        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 43%;
     }
 
     a:hover {
@@ -35,8 +39,8 @@
         align-items: center;
         justify-content: center;
         background-color: white;
-
         background-size: cover;background-position: center;
+        padding:0px;
     }
 
 

@@ -31,7 +31,10 @@
             <div class="col-md-4"  id="socialcareprop">
                 <a href="" ng-click="getSubCatList('Social Care')">
                 <div class="col-md-12 card" style="background-image: url('../resources/categoryImages/Social Care/Social Care-800.jpg');">
-                    <p class="cardText">Social Care</p>
+                    <div class="darkOverlay">
+                        <p class="cardText">Social Care</p>
+
+                    </div>
                 </div>
                 </a>
 
@@ -39,7 +42,9 @@
             <div class="col-md-4">
                 <a href="" ng-click="getSubCatList('General Tech')">
                 <div class="col-md-12 card" style="background-image: url('../resources/categoryImages/General Tech/generaltech-800.jpg');">
-                    <p class="cardText">General Tech</p>
+                    <div class="darkOverlay">
+                    <p class="cardText">General</p>
+                    </div>
                 </div>
                 </a>
 
@@ -47,7 +52,9 @@
             <div class="col-md-4 ">
                 <a href="" ng-click="getSubCatList('Deep Tech')">
                 <div class="col-md-12 card" style="background-image: url('../resources/categoryImages/noImage.jpg');">
+                    <div class="darkOverlay">
                     <p class="cardText">Deep Tech</p>
+                    </div>
                 </div>
                 </a>
 
@@ -65,12 +72,16 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         height: 220px;
         background-size: cover;background-position: center;
+         padding: 0px;
+
     }
 
+
     .cardText{
-        margin-top: 28%;
         font-size: 20px;
         font-weight: bolder;
         color: white;
+        position: relative;
+        top: 43%;
     }
 </style>
