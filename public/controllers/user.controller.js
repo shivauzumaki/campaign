@@ -6,20 +6,14 @@
 
 
             $scope.signup = function(){
-                console.log("user object>>>",$scope.user)
-                console.log("choice data>>",$scope.choices)
                 $scope.user.members = $scope.choices;
-                console.log("total object>>>",$scope.user)
                 UserService.create($scope.user)
                 .then(function (response) {
-                    console.log("prinrinf response on login>>>",response)
                     if(response.data.flag) {
-                        console.log(response)
                         $rootScope.user = response.data.user;
                         $rootScope.loggedUser = $rootScope.user.name;
                         $rootScope.modalFlag = true;
                         $localStorage.user = $rootScope.user;
-                        console.log("pringing user values signup>>",$localStorage.user,$rootScope.user);
                         $location.path("/");
                     }
                     else{
@@ -32,17 +26,14 @@
             },
 
                 $scope.loginUser = function(){
-                    console.log("user object for login>>>",$scope.user)
                     UserService.login($scope.user)
                         .then(function (response) {
-                            console.log("response after login>>>",response)
                             if(response.data.flag) {
                                 $rootScope.user = response.data.user;
                                 $rootScope.loggedUser = $rootScope.user.name;
                                 $rootScope.modalFlag = false;
                                 $scope.message = null;
                                 $localStorage.user = $rootScope.user;
-                                console.log("pringing user values login>>",$localStorage.user,$rootScope.user);
                                 $location.path("/");
                             }
                             else{

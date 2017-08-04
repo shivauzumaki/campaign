@@ -1,7 +1,7 @@
 <div header2></div>
-<div class="container">
+<div class="container" style="margin-top: 65px">
     <div style="width: 80%;margin-left: 10%; margin-top: 25px;">
-        <h2 style="margin: 10px 0; text-align: center;font-weight:bolder ">IdeaDeck Signup Form</h2>
+        <h2 style="margin: 10px 0; text-align: center;font-weight:bolder ">EDGE HACK Signup</h2>
         <form>
             <div class="form-group">
                 <label for="firstname">First Name</label>
@@ -32,7 +32,7 @@
 
             <div class="form-group">
                 <label for="teammembers">Team Members (Min:2 Max:5)</label>
-                <fieldset data-ng-repeat="choice in choices track by $index" id="teammembers" ng-model="user.choices">
+                <fieldset style="border: 1px solid #ccc;margin: 5px 0px" data-ng-repeat="choice in choices track by $index" id="teammembers" ng-model="user.choices">
                     <input class="form-control-edit" style="margin: 7px 10px;" type="text" ng-model="choice.firstname" name="" placeholder="Enter first name">
                     <input class="form-control-edit" style="margin: 7px 10px;"  type="text" ng-model="choice.lastname" name="" placeholder="Enter last name">
                     <input class="form-control-edit" style="margin: 7px 10px;" type="email" ng-model="choice.email" name="" placeholder="Enter email address">

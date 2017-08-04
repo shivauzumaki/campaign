@@ -5,10 +5,8 @@ angular
 
         $scope.creatingIdea = function(){
             /*$scope.idea.problemId = $rootScope.problemItem.id;*/
-            console.log("printing prblem scope data>>>",$scope.idea);
             IdeaService.createService($scope.idea)
                 .then(function (response) {
-                    console.log("printing response>>>",response)
                     $location.path("/profile")
                 })
         },

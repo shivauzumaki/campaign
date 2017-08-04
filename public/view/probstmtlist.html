@@ -1,28 +1,10 @@
 <div header></div>
-<!--<div>
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-        <div style="margin:0 3%">
-            <a class="navbar-brand" href="#/" style="color: white">IdeaDeck</a>
-            <div class="pull-right" id="navbarSupportedContent" style="margin-top:15px;margin-right: 15px;">
-                <div ng-if="loggedUser == null">
-                    <a class="buttonLike" href="#!/login"> Login </a>
-                    <a class="buttonLike" href="#!/signup"> Sign Up</a>
-                </div>
-                <div ng-if="loggedUser != null">
-                    <a style="color: white;"> Welcome {{loggedUser}}</a>
-                    <a class="buttonLike" href="#!/idea">Submit Idea</a>
-                    <a class="buttonLike" href="#!/profile">Profile</a>
-                    <a class="buttonLike" href="" ng-click = "userLogout()">Logout</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-</div>-->
-<div class="container" style="height: 100%">
+<div class="container" style="height: 100%;margin-top: 65px;margin-bottom: 60px">
+    <h2 style="text-align: center;font-weight: bolder">Category - {{mainCategory}} : Sub-category - {{mainSubCategory}}</h2>
     <div>
         <div class="row">
                 <div class="input-group" id="custom-search-input">
-                        <input type="text" class="form-control" placeholder="Search problem statement"/>
+                        <input ng-model="searchText" type="text" class="form-control" placeholder="Search problem statement"/>
                         <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="button">
                             <i class="glyphicon glyphicon-search"></i>
@@ -35,7 +17,7 @@
     <a ng-click="go_back_subcat()">Back</a>
     <br>
 
-    <div ng-repeat="problem in problemlist" class="col-md-3" style="margin: 10px 0;height: 150px">
+    <div ng-repeat="problem in problemlist | filter:searchText" class="col-md-3" style="margin: 10px 0;height: 150px">
         <a href="" ng-click="problemDetails(problem)">
             <div class="col-md-12 problemBlock" style="">
                 <div class="darkOverlay">

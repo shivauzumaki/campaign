@@ -3,19 +3,14 @@
         .module('ideadeck')
         .controller('ProblemController',function($scope,$rootScope,$routeParams,ProblemService,UserService,$localStorage,$location) {
 
-            console.log("pringing user values signup>>",$localStorage.user,">>>>",$rootScope.user);
-
             $scope.create = function(){
-                console.log("printing prblem scope data>>>",$scope.problem);
                 ProblemService.createService($scope.problem)
                     .then(function (response) {
-                        console.log("printing response>>>",response)
                     })
             },
 
                 $scope.getProblemList = function(subcategory){
                 $rootScope.mainSubCategory = subcategory.subcategory;
-                console.log("data>>>",$rootScope.mainSubCatgory,$rootScope.mainCatrgory);
                     ProblemService.getProbListService($rootScope.mainSubCategory,$rootScope.mainCategory)
                         .then(function (response) {
                             $rootScope.problemlist = response.data;
@@ -33,7 +28,6 @@
                 },
 
                 $scope.problemDetails = function(problemDet){
-                    console.log("printing problem details>>>",problemDet)
                     $rootScope.problemItem = null;
                     $rootScope.problemItem = problemDet
                     $location.path("/problemdetails")
