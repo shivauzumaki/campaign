@@ -1,6 +1,5 @@
 html,body{
-    height: 100%;
-    font-family: 'Droid Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-primary{
@@ -28,26 +27,27 @@ html,body{
 
 
 .buttonLike {
-    background: grey;
-    padding: 17px 13px;
+    height:60px;
+    /*padding: 20px 13px 0px 13px;*/
+
     text-align: center;
+    vertical-align: middle;
     color: black;
-    font-weight: bold;
-    margin-left:20px;
-}
-
-.navbar-inverse{
-    background-color: black;
-    border-radius: 0px;
-}
-
-.navbar-inverse .navbar-nav>li>a {
-    color: black;
+    margin-left:5px;
 }
 
 a,a:hover{
     text-decoration: none;
 }
+
+.navbar {
+    background-color: transparent;
+    background: rgba(255, 255, 255, 0.7);
+    border-color: transparent;
+}
+
+
+.navbar li { color: #000 }
 
 
 .footer-styles{
@@ -56,12 +56,16 @@ a,a:hover{
 }
 
 .footer{
-    height:50px;
-    background-color: #222;
-    color: white;
+    background-color: transparent;
+    background: rgba(255, 255, 255, 0.7);
+    border-color: transparent;
+
+
+    height:115px;
+    border-top: 1px solid #ccc; box-shadow:0 1px 9px -2px grey;
 
     /*Bottom of the page*/
-    position:fixed;
+    position: absolute;
     bottom:0;
     left:0;
     width:100%;
@@ -76,4 +80,19 @@ a,a:hover{
     width:100%;
     height:100%;
     background-color: rgba(0,0,0,0);
+}
+
+.breadcrumb{
+    background-color: white;
+}
+
+.breadcrumb > li + li:before {
+    color: #ccc;
+    content: "> ";
+    padding: 0 5px;
+}
+
+.wrapper {
+    min-height:50em;
+    position:relative;
 }

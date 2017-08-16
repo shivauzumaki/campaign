@@ -3,9 +3,13 @@
         .module('ideadeck')
         .controller('ProblemController',function($scope,$rootScope,$routeParams,ProblemService,UserService,$localStorage,$location) {
 
-            $scope.create = function(){
+            $scope.successMessage = null;
+            $scope.createProblem = function(){
+                $scope.problem.userId = $rootScope.user.id;
                 ProblemService.createService($scope.problem)
                     .then(function (response) {
+                        $scope.problem = null;
+                        alert("Problem Statement created successfully!!!")
                     })
             },
 

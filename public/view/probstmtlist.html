@@ -1,8 +1,13 @@
-<div header></div>
-<div class="container" style="height: 100%;margin-top: 65px;margin-bottom: 60px">
-    <h2 style="text-align: center;font-weight: bolder">Category - {{mainCategory}} : Sub-category - {{mainSubCategory}}</h2>
+<div class="wrapper"><div header></div>
+<div class="container " style="height: 100%;margin-top: 65px;padding-bottom: 115px;">
+    <br>
+    <ul class="breadcrumb">
+        <li><a href="#/">Home</a></li>
+        <li><a ng-click="go_back_subcat()">{{mainCategory}}</a></li>
+        <li>{{mainSubCategory}}</li>
+    </ul>
     <div>
-        <div class="row">
+        <div class="row" style="width: 98%;margin: 0px auto;">
                 <div class="input-group" id="custom-search-input">
                         <input ng-model="searchText" type="text" class="form-control" placeholder="Search problem statement"/>
                         <span class="input-group-btn">
@@ -14,7 +19,8 @@
         </div>
     </div>
 
-    <a ng-click="go_back_subcat()">Back</a>
+
+    <!--<a ng-click="go_back_subcat()"><i class="fa fa-chevron-left" style="font-size:36px"></i></a>-->
     <br>
 
     <div ng-repeat="problem in problemlist | filter:searchText" class="col-md-3" style="margin: 10px 0;height: 150px">
@@ -28,6 +34,7 @@
     </div>
 </div>
 <div footeridea></div>
+</div>
 
 <style type="text/css">
 

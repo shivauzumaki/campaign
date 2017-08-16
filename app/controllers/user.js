@@ -3,6 +3,13 @@ var emailSend = require("../../config/emailSender");
 var models = require('../models');
 var bCrypt = require('bcrypt-nodejs');
 
+var fs = require("fs");
+var path = require("path");
+var Sequelize = require("sequelize");
+var env = process.env.NODE_ENV || "production";
+var config = require(path.join(__dirname,'..','..','config', 'config.json'))[env];
+var sequelize = new Sequelize(config.database, config.username, config.password, config);
+
 
 
 module.exports = {
@@ -40,13 +47,18 @@ module.exports = {
     },
 
     getUserInfo(req,res){
-        models.user.findOne({
-            attributes: ['id','firstname','lastname','organisation','teamname','email']},{
+        console.log("req.body>>",req.body)
+        sequelize.query("SELECT `id`, `firstname`, `lastname`, `organisation`, `teamname`, `email` FROM `users` AS `user` WHERE `user`.`id` = :userId",
+            { replacements: { userId: req.body.id  },type: sequelize.QueryTypes.SELECT })
+
+        /*models.user.find(/!*{
+            attributes: ['id','firstname','lastname','organisation','teamname','email']},*!/{
             where:{
                 id: req.body.id
             }
-        })
+        })*/
             .then(function(user){
+                //console.log("user BE??",user)
                 res.status(200).json(user);
             })
             .catch(function (error) {

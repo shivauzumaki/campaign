@@ -1,31 +1,45 @@
+<div class="wrapper">
 <div header></div>
 
-<div class="container" style="margin-top: 70px;margin-bottom: 70px;width: 80%;">
-    <a href="javascript:void(0);" ng-click="go_back()">Back</a>
-    <h2 style="margin: 10px 0;font-weight: bolder">Problem statement details</h2>
-        <div>
-            <p style="font-weight: bolder">Title:</p>
-            <p>{{problemItem.title}} </p>
-        </div>
-        <div>
-            <p style="font-weight: bolder">Category:</p>
-            <p>{{problemItem.category}} </p>
-        </div>
-    <div>
-        <p style="font-weight: bolder">Sub-Category:</p>
-        <p>{{problemItem.subcategory}} </p>
+<div class="container" style="margin-top: 70px;padding-bottom: 130px;width: 80%;">
+    <br>
+    <a href="javascript:void(0);" ng-click="go_back()"><i class="fa fa-chevron-left" style="font-size:24px;color: black"></i></a>
+    <div style="text-align: center" >
+        <h2 style="margin: 10px 0;font-weight: bolder">Problem statement details</h2>
+            <div class="col-md-12 boxStyle" style="">
+                <p style="font-weight: bolder">Title</p>
+                <p>{{problemItem.title}} </p>
+            </div>
+            <div>
+                <div class="col-md-5 boxStyle" >
+                    <p style="font-weight: bolder">Category</p>
+                    <p>{{problemItem.category}} </p>
+                </div >
+                <div class="col-md-5 boxStyle" style="margin-left:16.5%" >
+                    <p style="font-weight: bolder">Sub-Category</p>
+                    <p>{{problemItem.subcategory}} </p>
+                </div>
+
+            </div>
+            <div class="col-md-12 boxStyle" >
+                <p style="font-weight: bolder">Description</p>
+                <p>{{problemItem.description}} </p>
+            </div>
     </div>
-        <div>
-            <p style="font-weight: bolder">Description:</p>
-            <p>{{problemItem.description}} </p>
-        </div>
 </div>
 <div footeridea></div>
+</div>
 
 <style type="text/css">
     .container{
         background-color: white;
         height:100%;
+    }
+
+    .boxStyle{
+        /*box-shadow: 0 0 10px #fff;*/
+        box-shadow: 0px 0px 5px #888888;
+        border: 1px solid black;padding: 20px;margin: 10px 0px;
     }
 
 </style>

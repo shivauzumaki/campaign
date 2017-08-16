@@ -5,7 +5,7 @@ var models = require('../models');
 module.exports = {
     createProblem(req,res) {
         models.problemstmt.create({
-            userId: "newuser",
+            userId: req.body.userId,
             title: req.body.title,
             description: req.body.description,
             category: req.body.category,

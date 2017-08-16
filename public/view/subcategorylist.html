@@ -1,8 +1,12 @@
-<div header></div>
-<div class="container" style="height: 100%;margin-bottom: 60px;margin-top: 65px;">
-    <h2 style="text-align: center;font-weight: bolder">Category - {{mainCategory}}</h2>
-    <a ng-click="go_back_main()">Back</a>
+<div class="wrapper"><div header></div>
+<div class="container" style="height: 100%;margin-top: 65px;padding-bottom: 115px;">
+    <!--<h2 style="text-align: center;font-weight: bolder">Category - {{mainCategory}}</h2>
+    <a ng-click="go_back_main()"><i class="fa fa-chevron-left" style="font-size:36px"></i></a>-->
     <br>
+    <ul class="breadcrumb">
+        <li><a ng-click="go_back_main()">Home</a></li>
+        <li>{{mainCategory}}</li>
+    </ul>
     <div ng-repeat="subCategory in mainSubCatgoryList" class="col-md-3 col-sm-3 col-xs-6" style="margin: 10px 0;height: 150px">
         <a href="" ng-click="getProblemList(subCategory)">
             <div class="col-md-12 subcatBlock" style="background-image: url('../resources/categoryImages/{{mainCategory}}/{{subCategory.subcategoryimageurl}}');">
@@ -14,6 +18,7 @@
     </div>
 </div>
 <div footeridea></div>
+</div>
 
 <style type="text/css">
 

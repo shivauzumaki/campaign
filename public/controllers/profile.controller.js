@@ -2,12 +2,15 @@
 angular
     .module('ideadeck')
     .controller('ProfileController',function($scope,$rootScope,$routeParams,UserService,ProfileService,$localStorage,$location) {
-
+        $scope.profileUser = null;
+        $scope.profileIdeas = null;
 
         $scope.getUserData = function(){
+            console.log("$rootScope.user.id>>",$rootScope.user.id)
             ProfileService.getUserDataService($rootScope.user.id)
                 .then(function (response) {
-                    $scope.profileUser = response.data;
+                    console.log("response getuserdata>>>",response)
+                    $scope.profileUser = response.data[0];
                 })
         },
 
