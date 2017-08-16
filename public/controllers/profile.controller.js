@@ -6,10 +6,8 @@ angular
         $scope.profileIdeas = null;
 
         $scope.getUserData = function(){
-            console.log("$rootScope.user.id>>",$rootScope.user.id)
             ProfileService.getUserDataService($rootScope.user.id)
                 .then(function (response) {
-                    console.log("response getuserdata>>>",response)
                     $scope.profileUser = response.data[0];
                 })
         },

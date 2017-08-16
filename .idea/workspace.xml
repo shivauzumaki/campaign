@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c6713e6-59bb-4885-863d-2e4aa4f47109" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/Official Edge Logo-White.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/Official Edge Logo-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/ace.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/sginnovate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/spring.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/startup-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/startupdisruptive.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/technotch-new-logo-dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/resources/vibrant.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/problem.js" afterPath="$PROJECT_DIR$/app/controllers/problem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user.js" afterPath="$PROJECT_DIR$/app/controllers/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/controllers/problem.controller.js" afterPath="$PROJECT_DIR$/public/controllers/problem.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/controllers/profile.controller.js" afterPath="$PROJECT_DIR$/public/controllers/profile.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/MainPage.html" afterPath="$PROJECT_DIR$/public/view/MainPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/css/global.css" afterPath="$PROJECT_DIR$/public/view/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/forgotpassword.html" afterPath="$PROJECT_DIR$/public/view/forgotpassword.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/ideafooter.html" afterPath="$PROJECT_DIR$/public/view/ideafooter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/ideaform.html" afterPath="$PROJECT_DIR$/public/view/ideaform.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/ideaheader.html" afterPath="$PROJECT_DIR$/public/view/ideaheader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/ideaheader2.html" afterPath="$PROJECT_DIR$/public/view/ideaheader2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/login.html" afterPath="$PROJECT_DIR$/public/view/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/probstmtdetails.html" afterPath="$PROJECT_DIR$/public/view/probstmtdetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/probstmtform.html" afterPath="$PROJECT_DIR$/public/view/probstmtform.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/probstmtlist.html" afterPath="$PROJECT_DIR$/public/view/probstmtlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/profile.html" afterPath="$PROJECT_DIR$/public/view/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/resetpassword.html" afterPath="$PROJECT_DIR$/public/view/resetpassword.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/signup.html" afterPath="$PROJECT_DIR$/public/view/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view/subcategorylist.html" afterPath="$PROJECT_DIR$/public/view/subcategorylist.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -103,36 +75,6 @@
         </entry>
       </file>
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="43" column="34" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/category.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="idea.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/idea.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/user.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1325">
@@ -142,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="problem.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="problem.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/problem.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
@@ -152,11 +94,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="idea.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/controllers/idea.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="problem.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/controllers/problem.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            <state relative-caret-position="205">
+              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/controllers/profile.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/controllers/user.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -185,7 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login-modal</find>
       <find>emailSend</find>
       <find>forgotPassword</find>
       <find>showpassconfirm</find>
@@ -215,6 +186,7 @@
       <find>profile</find>
       <find>bootstra</find>
       <find>user</find>
+      <find>console</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -252,7 +224,6 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/view/ideaheader.html" />
         <option value="$PROJECT_DIR$/app/controllers/user.js" />
-        <option value="$PROJECT_DIR$/public/controllers/profile.controller.js" />
         <option value="$PROJECT_DIR$/public/view/css/global.css" />
         <option value="$PROJECT_DIR$/public/view/ideaheader2.html" />
         <option value="$PROJECT_DIR$/public/view/probstmtlist.html" />
@@ -269,6 +240,7 @@
         <option value="$PROJECT_DIR$/public/view/probstmtform.html" />
         <option value="$PROJECT_DIR$/public/controllers/problem.controller.js" />
         <option value="$PROJECT_DIR$/app/controllers/problem.js" />
+        <option value="$PROJECT_DIR$/public/controllers/profile.controller.js" />
       </list>
     </option>
   </component>
@@ -567,7 +539,7 @@
       <workItem from="1501866874170" duration="1979000" />
       <workItem from="1502797147499" duration="8191000" />
       <workItem from="1502876210385" duration="9228000" />
-      <workItem from="1502903983744" duration="4462000" />
+      <workItem from="1502903983744" duration="4530000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1501443995825</created>
@@ -590,11 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501517370621</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1502909567805</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1502909567805</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182333000" />
+    <option name="totallyTimeSpent" value="182401000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,7 +642,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="commit 2" />
     <MESSAGE value="commit 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 3" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -773,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/controllers/idea.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/services/problem.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -809,14 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/controllers/profile.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/lib/bootstrap/dist/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -838,17 +803,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/controllers/user.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,14 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/controllers/problem.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/view/probstmtform.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -1085,6 +1036,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/controllers/idea.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/controllers/problem.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/controllers/profile.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/controllers/user.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding />
         </state>
       </provider>
