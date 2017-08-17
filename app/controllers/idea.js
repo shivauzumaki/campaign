@@ -7,7 +7,7 @@ module.exports = {
         console.log("req create idea>>>",JSON.stringify(req.body))
         var problems=req.body.problems;
         models.idea.create({
-            userId: req.user.id,
+            userId: req.body.userId,
             problemId: "problemId",
             title: req.body.title,
             summary: req.body.summary,
@@ -22,9 +22,8 @@ module.exports = {
             var size = req.body.problems.length;
             var problems = req.body.problems;
             for(var i = 0; i < size;i++){
-                console.log("probs>>",i,">>>>>",problems[i].id)
                 models.userideaprobmap.create({
-                    userId:req.user.id,
+                    userId:req.body.userId,
                     ideaId:idea.id,
                     problemId:problems[i].id
                 }).then(function () {

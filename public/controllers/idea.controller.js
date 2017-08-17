@@ -5,6 +5,8 @@ angular
 
         $scope.creatingIdea = function(){
             /*$scope.idea.problemId = $rootScope.problemItem.id;*/
+            $scope.idea.userId = $rootScope.user.id;
+            console.log("isea>>",$scope.idea)
             IdeaService.createService($scope.idea)
                 .then(function (response) {
                     $location.path("/profile")

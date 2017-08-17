@@ -9,7 +9,7 @@
                 ProblemService.createService($scope.problem)
                     .then(function (response) {
                         $scope.problem = null;
-                        alert("Problem Statement created successfully!!!")
+                        $location.path('/problemsuccess')
                     })
             },
 

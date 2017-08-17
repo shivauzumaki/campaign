@@ -36,6 +36,8 @@ html,body{
     margin-left:5px;
 }
 
+
+
 a,a:hover{
     text-decoration: none;
 }
@@ -61,14 +63,18 @@ a,a:hover{
     border-color: transparent;
 
 
-    height:115px;
-    border-top: 1px solid #ccc; box-shadow:0 1px 9px -2px grey;
+    height:80px;
+    border-top: 1px solid #ccc;
 
     /*Bottom of the page*/
     position: absolute;
     bottom:0;
     left:0;
     width:100%;
+}
+
+.imgSizeWidth{
+    width: 58px;margin: 0px 6px;
 }
 
 .darkOverlay{
@@ -95,4 +101,16 @@ a,a:hover{
 .wrapper {
     min-height:50em;
     position:relative;
+}
+
+@media (max-width:1000px){
+    .footer{
+        background: white;!important;
+    }
+}
+
+@media (max-width:767px) {
+    .headerBar{
+        background-color: white;
+    }
 }

@@ -2,27 +2,27 @@
     <nav class="navbar navbar-toggleable-md  navbar-fixed-top" style="border-bottom: 1px solid #ccc; box-shadow:0 1px 9px -2px grey;height: 61px; ">
         <div style="margin:0 3%" class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button style="border:1px solid black;margin-top: 15px;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only" style="background-color: black">Toggle navigation</span>
+                    <span class="icon-bar" style="background-color: black"></span>
+                    <span class="icon-bar" style="background-color: black"></span>
+                    <span class="icon-bar" style="background-color: black"></span>
                 </button>
                 <a class="navbar-brand" href="#/" style="padding-top: 10px;"><img src="../resources/Official%20Edge%20Logo-black.png" style="width: 120px;"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div ng-if="loggedUser == null">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="buttonLike" href="#!/login" style="padding-top: 20px;"> Login </a></li>
-                        <li><a class="buttonLike" href="#!/signup" style="padding-top: 20px;"> Sign Up</a></li>
+                        <li class = "headerBar"><a class="buttonLike" href="#!/login" style="padding-top: 20px;"> Login </a></li>
+                        <li class = "headerBar"><a class="buttonLike" href="#!/signup" style="padding-top: 20px;"> Sign Up</a></li>
                     </ul>
                 </div>
                 <div ng-if="loggedUser != null">
                     <ul class="nav navbar-nav navbar-right">
-                        <li style="color: black;padding-top: 20px;" > Welcome {{loggedUser}}</li>
-                        <li><a class="buttonLike" style="padding-top: 20px;" href="#!/idea">Submit Idea</a></li>
-                        <li><a class="buttonLike" style="padding-top: 20px;" href="#!/profile">Profile</a></li>
-                        <li><a class="buttonLike" style="padding-top: 20px;" href="" ng-click = "userLogout()">Logout</a></li>
+                        <li class = "headerBar" style="color: black;padding-top: 20px;text-align: center" > Welcome {{loggedUser}}</li>
+                        <li class = "headerBar"><a class="buttonLike" style="padding-top: 20px;" href="#!/idea">Submit Idea</a></li>
+                        <li class = "headerBar"><a class="buttonLike" style="padding-top: 20px;" href="#!/profile">Profile</a></li>
+                        <li class = "headerBar"><a class="buttonLike" style="padding-top: 20px;" href="" ng-click = "userLogout()">Logout</a></li>
                     </ul>
                 </div>
             </div>

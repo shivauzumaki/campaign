@@ -29,7 +29,7 @@
             <textarea required class="form-control" id="description" ng-model="problem.description" rows="8" placeholder="Enter the problem statement"></textarea>
         </div>
         <div style="text-align: center;">
-            <button type="submit" ng-click="createProblem()" class="btn btn-primary">Submit Problem Statement</button>
+            <button type="submit" ng-click="myform.$valid && createProblem()" class="btn btn-primary">Submit Problem Statement</button>
         </div>
     </form>
 </div>

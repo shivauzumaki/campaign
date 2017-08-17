@@ -65,6 +65,11 @@ angular
                     controller: 'ProblemController as probCtrl',
                     access: {restricted: true}
                 })
+                .when('/problemsuccess',{
+                    templateUrl: '/view/problemsuccess.html',
+                    controller: 'ProblemController as probCtrl',
+                    access: {restricted: false}
+                })
                 .when('/signup',{
                     templateUrl: '/view/signup.html',
                     controller: 'UserController as userCtrl',
