@@ -19,18 +19,23 @@ module.exports = {
             category: req.body.category,
             subcategory: req.body.subcategory
         }).then(function (idea) {
-            var size = req.body.problems.length;
-            var problems = req.body.problems;
-            for(var i = 0; i < size;i++){
-                models.userideaprobmap.create({
-                    userId:req.body.userId,
-                    ideaId:idea.id,
-                    problemId:problems[i].id
-                }).then(function () {
-                    console.log("added")
-                })
+            if( req.body.problems == undefined){
+                res.status(200).json({id:idea.id,message:"Idea created successfully"});
             }
-            res.status(200).json({id:idea.id,message:"Idea created successfully"});
+            else{
+                var size = req.body.problems.length;
+                var problems = req.body.problems;
+                for(var i = 0; i < size;i++){
+                    models.userideaprobmap.create({
+                        userId:req.body.userId,
+                        ideaId:idea.id,
+                        problemId:problems[i].id
+                    }).then(function () {
+                        console.log("added")
+                    })
+                }
+            }
+
         }).catch(function (error) {
             console.log("error>>",error)
             res.status(500).json(error);
