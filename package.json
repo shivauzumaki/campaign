@@ -29,6 +29,6 @@
     "passport-facebook": "latest",
     "passport-local": "~0.1.6",
     "require": "~2.4.0",
-    "sequelize": "3.30.4"
+    "sequelize": "4.0.0"
   }
 }
