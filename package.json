@@ -24,11 +24,11 @@
     "mysql": "~2.5.4",
     "node-schedule": "^1.2.3",
     "nodemailer": "^2.7.2",
-    "nodemon": "^1.11.0",
+    "nodemon": "^2.0.3",
     "passport": "~0.1.17",
     "passport-facebook": "latest",
     "passport-local": "~0.1.6",
     "require": "~2.4.0",
-    "sequelize": "3.30.4"
+    "sequelize": "3.33.0"
   }
 }
