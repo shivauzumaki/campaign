@@ -25,9 +25,9 @@
     "node-schedule": "^1.2.3",
     "nodemailer": "^2.7.2",
     "nodemon": "^1.11.0",
-    "passport": "~0.1.17",
+    "passport": "~0.6.0",
     "passport-facebook": "latest",
-    "passport-local": "~0.1.6",
+    "passport-local": "~1.0.0",
     "require": "~2.4.0",
     "sequelize": "3.30.4"
   }
